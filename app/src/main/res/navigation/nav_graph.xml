@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.kidhabit.ui.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_habitChecklistFragment"
+            app:destination="@id/habitChecklistFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/habitChecklistFragment"
+        android:name="com.example.kidhabit.ui.HabitChecklistFragment"
+        android:label="fragment_habit_checklist"
+        tools:layout="@layout/fragment_habit_checklist" >
+        <action
+            android:id="@+id/action_habitChecklistFragment_to_rewardsFragment"
+            app:destination="@id/rewardsFragment" />
+        <action
+            android:id="@+id/action_habitChecklistFragment_to_parentDashboardFragment"
+            app:destination="@id/parentDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.example.kidhabit.ui.RewardsFragment"
+        android:label="fragment_rewards"
+        tools:layout="@layout/fragment_rewards" />
+
+    <fragment
+        android:id="@+id/parentDashboardFragment"
+        android:name="com.example.kidhabit.ui.ParentDashboardFragment"
+        android:label="fragment_parent_dashboard"
+        tools:layout="@layout/fragment_parent_dashboard" />
+
+</navigation>
